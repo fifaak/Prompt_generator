@@ -19,7 +19,7 @@ Chain_of_Thought = st.text_input("Chain of Thought")
 Few_shot = st.text_input("Few_shot")
 
 def create_opentyphoon_client():
-    API_KEY='sk-psIjnhS63MFqDJzmrCnY6iLPr3iZ6wAXP57La0dvUcNoE9dc'
+    API_KEY='KEY'
     return OpenAI(
         api_key=API_KEY,
         base_url="https://api.opentyphoon.ai/v1",
@@ -84,7 +84,7 @@ def call_typhoon(user_input="", Task=Task, Persona=Persona, Aim=Aim, Recipients=
 
 def call_google(user_input="", Task=Task, Persona=Persona, Aim=Aim, Recipients=Recipients, Theme=Theme, Structure=Structure, Chain_of_Thought=Chain_of_Thought, Few_shot=Few_shot):
     model = genai.GenerativeModel('gemini-1.0-pro-latest')
-    genai.configure(api_key='AIzaSyAbMpjfHdZ4J1flpI2EhopIbJqE0h27vgE')
+    genai.configure(api_key='KEY')
     response = model.generate_content(f"""
             คุณมีหน้าที่สรุป prompt ให้เข้าใจง่าย
             
